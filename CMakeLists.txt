@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.8)
 find_package(Java REQUIRED)
 include(UseJava)
 
-set( BUILDINGS_INSTALL_PREFIX "Buildings-${PROJECT_VERSION}")
+set( BUILDINGS_INSTALL_PREFIX "Buildings")
 if( APPLE ) 
   set( PLATFORM_INSTALL_PREFIX darwin64 )
 elseif( WIN32 )
@@ -104,7 +104,7 @@ add_jar( ConvertWeatherData
 get_target_property(ConvertWeatherData_JAR ConvertWeatherData JAR_FILE)
 install( PROGRAMS ${ConvertWeatherData_JAR} DESTINATION ${BUILDINGS_INSTALL_PREFIX}/Resources/bin )
 
-install( DIRECTORY Buildings
+install( DIRECTORY Buildings/
   DESTINATION ${BUILDINGS_INSTALL_PREFIX}
   PATTERN CMakeLists.txt EXCLUDE
 )
