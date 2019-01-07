@@ -68,7 +68,7 @@ add_library( ModelicaBuildingsEnergyPlus SHARED
 target_link_libraries( ModelicaBuildingsEnergyPlus
   ${MODELICA_LIBS}
 )
-install( TARGETS ModelicaBuildingsEnergyPlus DESTINATION ${BUILDINGS_INSTALL_PREFIX}/Library/${PLATFORM_INSTALL_PREFIX} )
+install( TARGETS ModelicaBuildingsEnergyPlus DESTINATION ${BUILDINGS_INSTALL_PREFIX}/Resources/Library/${PLATFORM_INSTALL_PREFIX} )
 
 add_jar( ConvertEIRData 
   Buildings/Resources/src/fluid/chillers/convertEIR/src/convertEIR/BiCubicCurve.java 
