@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.8)
 find_package(Java REQUIRED)
 include(UseJava)
 
-set( BUILDINGS_INSTALL_PREFIX "Buildings")
+set( BUILDINGS_INSTALL_PREFIX "Buildings-${PROJECT_VERSION}")
 if( APPLE ) 
   set( PLATFORM_INSTALL_PREFIX darwin64 )
 elseif( WIN32 )
