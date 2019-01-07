@@ -8,7 +8,7 @@ block FMUZoneAdapter "Block that interacts with this EnergyPlus zone"
     "modelica://Buildings/Resources/Data/Experimental/EnergyPlus/EnergyPlus-9-0-0/Energy+.idd")
     "Name of the Energyplus IDD file";
   final parameter String epLibName=Modelica.Utilities.Files.loadResource(
-    "modelica://Buildings/Resources/Data/Experimental/EnergyPlus/EnergyPlus-9-0-0/lib/libepfmi.so")
+    "modelica://Buildings/Resources/Data/Experimental/EnergyPlus/EnergyPlus-9-0-0/lib/libepfmi.dylib")
     "Name of the EnergyPlus FMI library";
   parameter String zoneName
     "Name of the thermal zone as specified in the EnergyPlus input";
