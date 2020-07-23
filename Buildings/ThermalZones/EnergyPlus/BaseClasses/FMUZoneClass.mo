@@ -20,6 +20,10 @@ class FMUZoneClass "Class used to couple the FMU to interact with a thermal zone
     input String buildingsLibraryRoot "Root directory of the Buildings library (used to find the spawn executable)";
     input Buildings.ThermalZones.EnergyPlus.Types.Verbosity verbosity "Verbosity of EnergyPlus output";
 
+    // The idea is to use loadResource so that the modelica compiler will include these binaries in the generated FMU
+    final spawnExe=Modelica.Utilities.Files.loadResource("modelica://path/to/spawn.exe"),
+    final spawnLib=Modelica.Utilities.Files.loadResource("modelica://path/to/epfmi.so"),
+
     output FMUZoneClass adapter;
 
     external "C" adapter = ZoneAllocate(
@@ -30,7 +34,7 @@ class FMUZoneClass "Class used to couple the FMU to interact with a thermal zone
       zoneName,
       usePrecompiledFMU,
       fmuName,
-      buildingsLibraryRoot,
+      spawnExe, // <<< Need to adjust the ZoneAllocate C function to use this path
       verbosity)
         annotation (
           IncludeDirectory="modelica://Buildings/Resources/C-Sources/EnergyPlus",
