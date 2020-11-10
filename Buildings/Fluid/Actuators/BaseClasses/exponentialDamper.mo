@@ -27,7 +27,7 @@ algorithm
       kThetaSqRt := sqrt(Modelica.Math.exp(a+b*(1-y))) "y=0 is closed";
     end if;
   end if;
-annotation (smoothOrder=1, 
+annotation (
 Documentation(info="<html>
 <p>
 This function computes the opening characteristics of an exponential damper.
@@ -75,5 +75,5 @@ June 22, 2008 by Michael Wetter:<br/>
 First implementation.
 </li>
 </ul>
-</html>"));
+</html>"),   smoothOrder=1);
 end exponentialDamper;
