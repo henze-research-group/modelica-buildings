@@ -33,7 +33,7 @@ Documentation(info="<html>
 This function computes the opening characteristics of an exponential damper.
 </p><p>
 The function is used by the model
-<a href=\"modelica://Buildings.Fluid.Actuators.Dampers.Exponential\">
+<a href='modelica://Buildings.Fluid.Actuators.Dampers.Exponential'>
 Buildings.Fluid.Actuators.Dampers.Exponential</a>.
 </p><p>
 For <code>yL &lt; y &lt; yU</code>, the damper characteristics is
