@@ -180,7 +180,7 @@ initial equation
       nomVal),
     AssertionLevel.warning);
 
-  gammaMax = 0.8 * nomVal.m_flow_nominal * dX_nominal * h_fg / QLat_flow_nominal;
+  gammaMax = -0.8 * nomVal.m_flow_nominal * dX_nominal * h_fg / QLat_flow_nominal;
 
   // If gamma is bigger than a maximum value, write a warning and then
   // use the smaller value.
@@ -197,7 +197,7 @@ initial equation
 
   logArg = 1-min(nomVal.gamma, gammaMax)*QLat_flow_nominal/nomVal.m_flow_nominal/h_fg/dX_nominal;
 
-  K = -Modelica.Math.log(logArg);
+  K = Modelica.Math.log(logArg);
   K2 = K/mMax*nomVal.m_flow_nominal^(-0.2);
 
   assert(QLat_flow_nominal < 0, "QLat_nominal must be a negative number. Check parameters.");
