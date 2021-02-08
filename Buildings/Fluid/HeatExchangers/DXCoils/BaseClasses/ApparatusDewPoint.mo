@@ -15,7 +15,7 @@ block ApparatusDewPoint "Calculates air properties at apparatus dew point"
     quantity="ThermodynamicTemperature",
     unit="K",
     displayUnit="degC",
-    min=233.15,
+    min=0,
     max=373.15) "Dry bulb temperature of air at apparatus dew point"
     annotation (Placement(transformation(extent={{100,-60},{120,-40}})));
 protected
