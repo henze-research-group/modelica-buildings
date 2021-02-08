@@ -94,7 +94,7 @@ equation
       x2=0.999*hEvaIn,
       deltaX=0.0001);
   else
-    m_flow_nonzero = 0;
+    m_flow_nonzero = 0.00001;
     spe            = 0;
     UAcp           = 0;
     bypass         = 0;
