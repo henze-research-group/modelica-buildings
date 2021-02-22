@@ -8,6 +8,7 @@ block ApparatusDewPoint "Calculates air properties at apparatus dew point"
     unit="J/kg") "Specific enthalpy of air at apparatus dew point"
     annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   Modelica.Blocks.Interfaces.RealOutput XADP(
+    nominal = 0.5,
     min=0,
     max=1.0) "Humidity mass fraction of air at  apparatus dew point"
     annotation (Placement(transformation(extent={{100,40},{120,60}})));
