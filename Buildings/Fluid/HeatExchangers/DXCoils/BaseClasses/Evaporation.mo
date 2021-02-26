@@ -169,7 +169,7 @@ initial equation
     (XEvaOut_nominal-XiSatRefOut_nominal) * Buildings.Utilities.Psychrometrics.Constants.h_fg;
 
   // Potential difference in moisture concentration that drives mass transfer at nominal condition
-  dX_nominal = XEvaOut_nominal-XEvaWetBulOut_nominal;
+  dX_nominal = XEvaWetBulOut_nominal - XEvaOut_nominal;
   assert(
     dX_nominal > 1E-10,
     "*** Warning: In DX coil model, dX_nominal = " + String(dX_nominal) + "
@@ -180,7 +180,7 @@ initial equation
       nomVal),
     AssertionLevel.warning);
 
-  gammaMax = 0.8 * nomVal.m_flow_nominal * dX_nominal * h_fg / (-QLat_flow_nominal);
+  gammaMax = -0.8 * nomVal.m_flow_nominal * dX_nominal * h_fg / QLat_flow_nominal;
 
   // If gamma is bigger than a maximum value, write a warning and then
   // use the smaller value.
