@@ -279,6 +279,7 @@ equation
     m = 0;
     TEvaWetBulOut = 293.15;
     XEvaWetBulOut = 0;
+    XiSatRefOut = 1;
   end if;
 
   annotation (defaultComponentName="eva",
